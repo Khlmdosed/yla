@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Baby Yla 💘</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4081;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      position: relative;
+    }
+
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #d3d3d3;
+      color: black;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Do you love me, my baby Yla? 💗</h1>
+  <button id="yesBtn">Yes ❤️</button>
+  <button id="noBtn">No 😢</button>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+
+    // Yes button
+    yesBtn.onclick = () => {
+      document.body.innerHTML = "<h1>Yieee I love you too, baby Yla! 💖💘</h1>";
+    };
+
+    // Make No button move
+    noBtn.addEventListener("mouseover", () => {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      noBtn.style.left = `${randomX}px`;
+      noBtn.style.top = `${randomY}px`;
+    });
+  </script>
+
+</body>
+</html>
